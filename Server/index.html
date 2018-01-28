@@ -1,0 +1,28 @@
+
+<html>
+<head>
+  <meta
+     name='viewport'
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+  />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<button style="height: 100%; width: 49%; background-color: #cc0099;" id="left" type="button" class="btn btn-primary">Left</button>
+<button style="height: 100%; width: 49%; background-color: #33cc33;" id="right" type="button" class="btn btn-primary">Right</button>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io(window.location.hostname);
+  $("#left").click( function() {
+    socket.emit('direction', { direction: 'left' });
+  });
+  $("#right").click( function() {
+    socket.emit('direction', { direction: 'right' });
+  });
+</script>
+</body>
+</html>

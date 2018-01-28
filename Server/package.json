@@ -1,0 +1,13 @@
+{
+  "name": "ggjplaysjs",
+  "version": "0.0.1",
+  "main": "index.coffee",
+  "scripts": {
+    "start": "coffee init.coffee"
+  },
+  "author": "Michael Payne",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}
